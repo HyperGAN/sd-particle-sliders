@@ -1,0 +1,172 @@
+{
+  "schema": "sd-particle-sliders-clean-export-v1",
+  "source_repository": "HyperGAN/particle-sliders",
+  "source_commit": "a4de751c82d8123203953117eec80e952291aea7",
+  "source_product_root": "conceptmod/sd-shared-game",
+  "proposed_destination": "HyperGAN/sd-particle-sliders",
+  "history_policy": "fresh minimal scaffold plus source review commit; no source history copied",
+  "scaffold_commit": "4ca473d58fa639976c3be7d2655dae49bd8f66e7",
+  "files": [
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/.gitignore",
+      "original_blob": "e2cae228c899cb23b564734c9cb6932ffd7c5f3a",
+      "original_sha256": "5dc1cdcb5b4708cff0735f2a7f61dca22e28f04e62e6ca54ea0958f8d527e2e5",
+      "exported_path": ".gitignore",
+      "exported_sha256": "766c3aa33ad4d60ea410204f08f711a71ea4f25d70980235d9888fe0509e1812",
+      "byte_identical": false,
+      "rationale": "Retain original exclusions and exclude local Python/build/test/model artifacts at the new root"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/MANIFEST.in",
+      "original_blob": "16c125211043014c93eedf567c748b6d088f0529",
+      "original_sha256": "0c6d8b6dd6cf971927090d8113db87510aa097ea1a6ec2e72b6914bcee3b1318",
+      "exported_path": "MANIFEST.in",
+      "exported_sha256": "0a87f5ce593bec1f6ed47edef9e328fc8a7bd4bd635ba5bf93bc9424bc4a1760",
+      "byte_identical": false,
+      "rationale": "Include preserved license and new source/provenance documentation in the sdist"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/QUALIFICATION.md",
+      "original_blob": "77cac8a6a666a59ba55702f1edb69ae89d4442e0",
+      "original_sha256": "24025afbf8fffeb38a7ee47b8891c7a281ccfe0d594171e078664ba3f76908fc",
+      "exported_path": "QUALIFICATION.md",
+      "exported_sha256": "7aa933994e697a8635a62686c20c244e223ff2621f2e19efc1d99297e83e0117",
+      "byte_identical": false,
+      "rationale": "Keep versioned qualification and limits; adapt root reproduction commands and identify extraction-only verification separately"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/README.md",
+      "original_blob": "f8eb9831c80e1a5ae37d5b3976d80b42f3741f5e",
+      "original_sha256": "dfe3d062c79cdd09d0f8b40f22d0726f31073587803081e8efa9c650f8b53cb5",
+      "exported_path": "README.md",
+      "exported_sha256": "0ffb31f7c088846fe9ebf171cda21072e021015f37aa68a617ed3970a722f1fd",
+      "byte_identical": false,
+      "rationale": "Adapt root installation commands and historical-context documentation to a standalone repository; no runtime changes"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/pyproject.toml",
+      "original_blob": "95b23301ac0d03f628ef91fce5cc3939fdd8ac01",
+      "original_sha256": "db439edb1b8e4ce085c9b84ff8541127cf6fa2a67e5ad020229571b82eb65b13",
+      "exported_path": "pyproject.toml",
+      "exported_sha256": "b61a193e8f93776e23623a082c7032dd39792cd820eaeff28a56393a5a0d9da4",
+      "byte_identical": false,
+      "rationale": "Declare the unchanged upstream MIT license and package its complete notice; dependency/import/version/entrypoints unchanged"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/src/sd_slider_game/__init__.py",
+      "original_blob": "db70d6eeca15601a7cc306c2de6f68c92ea597f8",
+      "original_sha256": "c0e3662740fc1afcf97195c0d5b45e4e8b135a839587561040fee0e9d1bb6d4e",
+      "exported_path": "src/sd_slider_game/__init__.py",
+      "exported_sha256": "c0e3662740fc1afcf97195c0d5b45e4e8b135a839587561040fee0e9d1bb6d4e",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/src/sd_slider_game/adapter.py",
+      "original_blob": "60adcbb4ed38a3379a819f949686decb0cac0e8f",
+      "original_sha256": "ff4449ca8413f077b15d263dcbe70eda0875528a3425f5bf1c0bedef16c6ddf4",
+      "exported_path": "src/sd_slider_game/adapter.py",
+      "exported_sha256": "ff4449ca8413f077b15d263dcbe70eda0875528a3425f5bf1c0bedef16c6ddf4",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/src/sd_slider_game/cli.py",
+      "original_blob": "6586722ed9fbd2fc8abadd511accb3131c0e595a",
+      "original_sha256": "877209a5f8f0c5ad60969137b5dfec811b0fb0b6f0011ff8231eac75ff0baea1",
+      "exported_path": "src/sd_slider_game/cli.py",
+      "exported_sha256": "877209a5f8f0c5ad60969137b5dfec811b0fb0b6f0011ff8231eac75ff0baea1",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/src/sd_slider_game/native_sources.json",
+      "original_blob": "35133572068aab76c44d546149687bbf79dff5f5",
+      "original_sha256": "c06750bd7b2b510d4f85a47221713f113e9bc9ffdf2b6b12cc5b6f0346bd8249",
+      "exported_path": "src/sd_slider_game/native_sources.json",
+      "exported_sha256": "c06750bd7b2b510d4f85a47221713f113e9bc9ffdf2b6b12cc5b6f0346bd8249",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "conceptmod/sd-shared-game/tests/test_sd_game.py",
+      "original_blob": "f16392c5744460f8613a46b0eed90d9b7fc32e5d",
+      "original_sha256": "1818df492c492c8884c2129e6f27cee68ee38b7c8e15f5884b0c4621de1e626c",
+      "exported_path": "tests/test_sd_game.py",
+      "exported_sha256": "1818df492c492c8884c2129e6f27cee68ee38b7c8e15f5884b0c4621de1e626c",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    },
+    {
+      "original_repo": "HyperGAN/particle-sliders",
+      "original_commit": "a4de751c82d8123203953117eec80e952291aea7",
+      "original_path": "LICENSE",
+      "original_blob": "b2a2dca14d1a01ad6ad590db2486e0c3af5a32e5",
+      "original_sha256": "2b61d4a8dd7a958b99133a92e92eede6f5e8b0f7b44d234665f822051e530685",
+      "exported_path": "LICENSE",
+      "exported_sha256": "2b61d4a8dd7a958b99133a92e92eede6f5e8b0f7b44d234665f822051e530685",
+      "byte_identical": true,
+      "rationale": "byte-identical relocation"
+    }
+  ],
+  "generated_files": [
+    {
+      "exported_path": "EXTRACTION.md",
+      "exported_sha256": "a8089d12133bca06fce8f27ede77d9df928ac9d0054db9b9aebb5a6a70a93f21",
+      "rationale": "Explicit extraction/identity/publication boundaries"
+    },
+    {
+      "exported_path": "PROVENANCE.json",
+      "exported_sha256": null,
+      "rationale": "Self-describing provenance; self hash is recorded by its Git blob and external verification receipt"
+    }
+  ],
+  "complete_export_allowlist": [
+    ".gitignore",
+    "MANIFEST.in",
+    "QUALIFICATION.md",
+    "README.md",
+    "pyproject.toml",
+    "src/sd_slider_game/__init__.py",
+    "src/sd_slider_game/adapter.py",
+    "src/sd_slider_game/cli.py",
+    "src/sd_slider_game/native_sources.json",
+    "tests/test_sd_game.py",
+    "LICENSE",
+    "EXTRACTION.md",
+    "PROVENANCE.json"
+  ],
+  "runtime_and_tests_byte_identical": [
+    "src/sd_slider_game/__init__.py",
+    "src/sd_slider_game/adapter.py",
+    "src/sd_slider_game/cli.py",
+    "src/sd_slider_game/native_sources.json",
+    "tests/test_sd_game.py"
+  ],
+  "excluded_historical_model_files": [
+    {
+      "path": "conceptmod/textsliders/train_lora.py",
+      "rationale": "Preserve original embedded/historical trainer; no import dependency from the standalone product"
+    }
+  ]
+}

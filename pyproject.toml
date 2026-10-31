@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conceptmod-sd-shared-game"
+version = "0.1.0"
+description = "Opt-in Stable Diffusion native response game, separate from historical conceptmod MSE"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "particle-sliders-core[hypergan-hndl] @ git+https://github.com/HyperGAN/particle-sliders.git@7a8a321d04323d49319d0b08e6093a0ddce36b27#subdirectory=packages/particle-sliders-core",
+  "diffusers==0.35.1",
+  "pillow>=13.0.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "build"]
+
+[project.scripts]
+sd-shared-game = "sd_slider_game.cli:main"
+
+[project.entry-points."particle_sliders.response_backends"]
+sd_shared_game = "sd_slider_game.adapter:BACKEND"
+
+[project.entry-points."particle_sliders.inference_backends"]
+sd_shared_game = "sd_slider_game.adapter:INFERENCE"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sd_slider_game = ["native_sources.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
