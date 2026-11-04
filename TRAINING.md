@@ -9,7 +9,7 @@ The project wrapper remains available: `./train --config training.example.json`.
 `./train` forwards to the common `particle-slider train` command with this
 project's explicit `training_profile.json`. The frontend can be selected through
 `PARTICLE_SLIDER_COMMAND`; it does not install or replace product dependencies.
-`./train --config training.example.json --plan` inspects the request without
+`particle-slider plan --config training.example.json` inspects the request without
 allocating a GPU. Execution and `--check` return the concrete readiness reason
 before loading native model code.
 
