@@ -1,0 +1,19 @@
+{
+  "schema": "particle-slider-profile-v1",
+  "name": "sd-particle-sliders-unavailable",
+  "product": "sd-particle-sliders",
+  "config_kind": "native",
+  "status": "blocked",
+  "reason": "The checked-out default source is a review scaffold and contains no executable Stable Diffusion training factory.",
+  "runtime": {
+    "python": "python3"
+  },
+  "capabilities": {
+    "resume": false,
+    "periodic_checkpoint": false,
+    "check": false
+  },
+  "target_steps_path": "steps",
+  "evidence": "README.md",
+  "source_revision": "4ca473d58fa639976c3be7d2655dae49bd8f66e7"
+}
