@@ -1,0 +1,3 @@
+# Shared API inspection only; this retired scaffold has no native SD trainer.
+# Core 0.12.0 requires Python >=3.11, Torch >=2.6,<3, and official PG 0.9.4.
+particle-sliders-core @ git+https://github.com/HyperGAN/particle-sliders.git@ddb41423bcefc1fe76cd94d0f9b367353b3ea137#subdirectory=packages/particle-sliders-core
