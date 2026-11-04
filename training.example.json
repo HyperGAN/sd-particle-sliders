@@ -1,3 +1,10 @@
 {
-  "steps": 128
+  "schema": "particle-slider-train-v1",
+  "profile": "training_profile.json",
+  "training": {
+    "steps": 128
+  },
+  "execution": {
+    "runner": "local"
+  }
 }

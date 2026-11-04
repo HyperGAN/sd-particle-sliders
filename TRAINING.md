@@ -1,8 +1,10 @@
 # One training command
 
 ```sh
-./train --config training.example.json
+particle-slider train --config training.example.json
 ```
+
+The project wrapper remains available: `./train --config training.example.json`.
 
 `./train` forwards to the common `particle-slider train` command with this
 project's explicit `training_profile.json`. The frontend can be selected through
