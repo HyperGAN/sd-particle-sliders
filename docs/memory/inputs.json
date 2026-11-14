@@ -1,0 +1,69 @@
+{
+  "retired": true,
+  "current_native_training": false,
+  "current_native_sampling": false,
+  "historical_reference_model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "historical_reference_revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+  "historical_FP16_serialized_weight_upper_bytes": {
+    "UNet": 1719125304,
+    "CLIP": 246144864,
+    "VAE": 167335342
+  },
+  "historical_total_upper_bytes": 2132605510,
+  "training_budget_applicability": "No trainer exists on current main; no fictitious PG/Adam state is claimed.",
+  "schema": "calculated-memory-inputs-v1",
+  "repository": "sd-particle-sliders",
+  "calculated_on": "2026-11-14",
+  "unit": "GiB=2^30 bytes",
+  "measured": false,
+  "profiles": [
+    {
+      "operation": "Current retired scaffold / core check",
+      "gpu_count": 0,
+      "vram_gib_per_gpu": 0,
+      "host_ram_gib": 2,
+      "limits": "No model; no native training or sampling",
+      "ledger": {
+        "interpreter_import_and_metadata_gib": 2
+      },
+      "calculated_vram_subtotal_gib": 0,
+      "host_ledger_gib": {
+        "interpreter_and_imports": 2
+      },
+      "host_subtotal_gib": 2
+    },
+    {
+      "operation": "Historical SD1.5 sampling planning reference",
+      "gpu_count": 1,
+      "vram_gib_per_gpu": 8,
+      "host_ram_gib": 12,
+      "limits": "B1;512\u00b2;CLIP77;FP16;SDPA;no offload;not implemented on main",
+      "ledger": {
+        "frozen_serialized_upper_gib": 1.9861436542123556,
+        "UNet_live_and_attention_gib": 2.5,
+        "VAE_decode_gib": 1,
+        "workspace_gib": 2.5
+      },
+      "calculated_vram_subtotal_gib": 7.986143654212356,
+      "host_ledger_gib": {
+        "source_FP32_weights": 3.973,
+        "converted_components": 1.987,
+        "images": 0.1,
+        "runtime": 4
+      },
+      "host_subtotal_gib": 10.059999999999999
+    }
+  ],
+  "source_records": [
+    {
+      "path": "scripts/check_core.py",
+      "bytes": 1296,
+      "sha256": "cadf914ac99f10ed06b307b739d58c16f96da0aed26e89745cb7e47386ff69e9"
+    },
+    {
+      "path": "requirements-core.txt",
+      "bytes": 317,
+      "sha256": "fa3e5ed5e3a71a3deef79933cf08e821955424146cf82f928dff70d652c97c11"
+    }
+  ]
+}
