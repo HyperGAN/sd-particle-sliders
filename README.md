@@ -1,5 +1,11 @@
 # SD Particle Sliders
 
+**Memory (calculated):** retired current scaffold: **0 GPU /2 GiB RAM**. Historical SD1.5 512² sampling reference only: **8 GiB VRAM /12 GiB RAM**; no current native trainer. See [MEMORY.md](MEMORY.md) for the complete budgets and assumptions.
+
+
+
+
+
 Retired Stable Diffusion integration scaffold. There is no native trainer,
 adapter package, model release or deployed application on the default branch.
 
