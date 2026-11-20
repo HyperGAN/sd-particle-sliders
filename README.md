@@ -30,14 +30,14 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python scripts/check_core.py
 python -m pip check
 ```
 
-The reference is `particle-sliders-core==0.12.0` from
-[`ddb41423bcefc1fe76cd94d0f9b367353b3ea137`](https://github.com/HyperGAN/particle-sliders/commit/ddb41423bcefc1fe76cd94d0f9b367353b3ea137),
-which requires official `particlegan==0.9.4` and Torch `>=2.6,<3`. The core checks
-the exhaustive Python source manifest for the `release-0.9.4` profile. The check
+The reference is `particle-sliders-core==0.14.2` from
+[`9134152cfc65aba14ff734ea803f83f3dca3818b`](https://github.com/HyperGAN/particle-sliders/commit/9134152cfc65aba14ff734ea803f83f3dca3818b),
+which requires official `particlegan==0.10.1` and Torch `>=2.6,<3`. The core checks
+the exhaustive Python source manifest for the `release-0.10.1` profile. The check
 script verifies that profile and imports the shared engine and CLI on CPU. It
 downloads no model weights and performs no native SD training or qualification.
 See the pinned core's
-[compatibility contract](https://github.com/HyperGAN/particle-sliders/blob/ddb41423bcefc1fe76cd94d0f9b367353b3ea137/packages/particle-sliders-core/COMPATIBILITY-PG094.md).
+[compatibility contract](https://github.com/HyperGAN/particle-sliders/blob/9134152cfc65aba14ff734ea803f83f3dca3818b/packages/particle-sliders-core/COMPATIBILITY-PG0101.md).
 
 This is current dependency/reference upkeep for the scaffold. It does not revive
 the retired implementation, admit its old cohort against the new core, convert
