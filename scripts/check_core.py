@@ -10,17 +10,17 @@ def main():
         raise SystemExit("The current shared core requires Python >=3.11.")
 
     installed = {name: version(name) for name in ("particle-sliders-core", "particlegan")}
-    expected = {"particle-sliders-core": "0.14.2", "particlegan": "0.10.1"}
+    expected = {"particle-sliders-core": "0.15.1", "particlegan": "0.11.0"}
     if installed != expected:
         raise SystemExit(f"Install requirements-core.txt in a fresh environment: {installed}")
 
-    from particle_sliders.pg0101 import ConditionalPG0101, validate_pg09_domain
+    from particle_sliders.engine import ConditionalParticleGAN, validate_engine_domain
     from particle_sliders.session_cli import main as shared_cli
 
     # The public gate checks the installed PG source manifest without a model,
     # optimizer, training session, GPU allocation or network access.
-    profile = validate_pg09_domain([1, 4, 8, 8], response_domain="continuous_field")
-    if not callable(ConditionalPG0101) or not callable(shared_cli):
+    profile = validate_engine_domain([1, 4, 8, 8], response_domain="continuous_field")
+    if not callable(ConditionalParticleGAN) or not callable(shared_cli):
         raise SystemExit("The shared engine or CLI entry point is unavailable.")
     print(json.dumps({"scope": "shared core only; no native SD trainer",
                       "versions": installed, **profile}, sort_keys=True))
