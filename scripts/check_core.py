@@ -10,7 +10,7 @@ def main():
         raise SystemExit("The current shared core requires Python >=3.11.")
 
     installed = {name: version(name) for name in ("particle-sliders-core", "particlegan")}
-    expected = {"particle-sliders-core": "0.15.1", "particlegan": "0.11.0"}
+    expected = {"particle-sliders-core": "0.15.2", "particlegan": "0.11.1"}
     if installed != expected:
         raise SystemExit(f"Install requirements-core.txt in a fresh environment: {installed}")
 

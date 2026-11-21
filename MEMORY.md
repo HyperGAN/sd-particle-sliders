@@ -55,7 +55,7 @@ trainer uses that recipe; no optimizer is allocated by this retired repository.
 
 Training figures freeze pretrained weights, use RAW current adapters and explicitly
 disable weight EMA. They include no full-base gradients or EMA shadow model.
-The PG 0.9.5 `bispf_optimized` recipe uses zero-momentum DualNorm, not Adam's two
+The ParticleGAN's `bispf_optimized` recipe uses zero-momentum DualNorm, not Adam's two
 full-size moment tensors. Its direction blend still retains protected gradients,
 clones originals/displacements, and converts up to two protected normals to
 FP64. For a conservative planning allowance, the tables reserve **80 bytes per
@@ -64,9 +64,9 @@ and 56 for protected FP32 gradients, FP32/FP64 direction/projection/polar,
 rollback and serialization temporaries. This is an explicit allowance, not a claim
 that every temporary is simultaneously allocated or that it is an exact peak.
 Small scalar optimizer statistics remain enabled. Recipe changes need a new ledger.
-See released [PG 0.9.5 recipes](https://github.com/255BITS/ParticleGAN/blob/v0.9.5/particlegan/recipes.py),
-[DualNorm](https://github.com/255BITS/ParticleGAN/blob/v0.9.5/particlegan/optim/dualnorm.py)
-and [direction blend](https://github.com/255BITS/ParticleGAN/blob/v0.9.5/particlegan/optim/direction_blend.py).
+See released [ParticleGAN 0.11.1 recipes](https://github.com/HyperGAN/ParticleGAN/blob/d5dec2fe005305082acf382f0939a4bdb51c7131/particlegan/recipes.py),
+[DualNorm](https://github.com/HyperGAN/ParticleGAN/blob/d5dec2fe005305082acf382f0939a4bdb51c7131/particlegan/optim/dualnorm.py)
+and [direction blend](https://github.com/HyperGAN/ParticleGAN/blob/d5dec2fe005305082acf382f0939a4bdb51c7131/particlegan/optim/direction_blend.py).
 
 Activation entries below are architecture-based envelopes. Fused/memory-efficient
 SDPA is assumed for the pretrained model; a math attention fallback that materializes
