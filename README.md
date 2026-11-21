@@ -31,15 +31,14 @@ python -m pip check
 ```
 
 The reference is `particle-sliders-core==0.15.2` from
-[`ec1161f5d74481be3540cb0dfa63d0e8f8b54e90`](https://github.com/HyperGAN/particle-sliders/commit/ec1161f5d74481be3540cb0dfa63d0e8f8b54e90),
-which requires official `particlegan==0.11.1` and Torch `>=2.6,<3`. The core checks
-the exhaustive Python source manifest for the `release-0.11.1` profile. The check
-script verifies that profile and imports the shared engine and CLI on CPU. It
-downloads no model weights and performs no native SD training or qualification.
-See the pinned core's
-[compatibility contract](https://github.com/HyperGAN/particle-sliders/blob/ec1161f5d74481be3540cb0dfa63d0e8f8b54e90/packages/particle-sliders-core/COMPATIBILITY.md).
+[`b1f780decc516808cfd3019d5e5b674457161f86`](https://github.com/HyperGAN/particle-sliders/commit/b1f780decc516808cfd3019d5e5b674457161f86),
+which requires official `particlegan==0.11.1` and Torch `>=2.6,<3`. The CPU
+check verifies the pinned core install, uses the core's exhaustive ParticleGAN
+source manifest for `release-0.11.1`, and imports the shared engine, CLI, and
+CFP, CLABS and PSR APIs. [Compatibility contract](https://github.com/HyperGAN/particle-sliders/blob/b1f780decc516808cfd3019d5e5b674457161f86/packages/particle-sliders-core/COMPATIBILITY.md)
 
-This is current dependency/reference upkeep for the scaffold. It does not revive
-the retired implementation, admit its old cohort against the new core, convert
-historical MSE/SD3 weights, or train or publish sliders. A future native
-integration would need its own implementation, source pins and qualification.
+This scaffold has no native denoising loop or SD steering measurements. A
+future native implementation could apply CFP or CLABS once per eligible
+denoising interval using a calibrated activation signal, or fit PSR on matched
+activations. Qualifying a schedule would require held-out finished outputs
+from matched constant and timed runs on the same saved RAW adapter. [Shared methods and qualification](https://github.com/HyperGAN/particle-sliders/blob/b1f780decc516808cfd3019d5e5b674457161f86/docs/strength-schedules.md#activation-dependent-steering)
