@@ -37,8 +37,10 @@ check verifies the pinned core install, uses the core's exhaustive ParticleGAN
 source manifest for `release-0.11.1`, and imports the shared engine, CLI, and
 CFP, CLABS and PSR APIs. [Compatibility contract](https://github.com/HyperGAN/particle-sliders/blob/b1f780decc516808cfd3019d5e5b674457161f86/packages/particle-sliders-core/COMPATIBILITY.md)
 
-This scaffold has no native denoising loop or SD steering measurements. A
-future native implementation could apply CFP or CLABS once per eligible
-denoising interval using a calibrated activation signal, or fit PSR on matched
-activations. Qualifying a schedule would require held-out finished outputs
-from matched constant and timed runs on the same saved RAW adapter. [Shared methods and qualification](https://github.com/HyperGAN/particle-sliders/blob/b1f780decc516808cfd3019d5e5b674457161f86/docs/strength-schedules.md#activation-dependent-steering)
+## Experimental SD1.5 replay
+
+The opt-in research entry compares stock OFF, adaptive A-PSR and a time-constant
+control at matched native coefficient dose. It takes caller-supplied stock DDIM
+inputs, qualified RAW probes and an explicit strength. A guarded zero-edit
+comparison matched archived stock outputs. Held-out effect measurements for a
+fitted nonzero schedule are pending. [Replay requirements and usage](docs/sd15-replay.md)

@@ -1,0 +1,3 @@
+# Isolated research environment for the stock SD1.5 A-PSR replay API.
+particle-sliders-core @ git+https://github.com/HyperGAN/particle-sliders.git@c4b3655f43ee9b6e9780bb65766dee0d603cb749#subdirectory=packages/particle-sliders-core
+diffusers @ git+https://github.com/huggingface/diffusers.git@dafe3733fcfdbf3c48915fe77be3aef65b5d6a2d
